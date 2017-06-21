@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Contracts\Auth\Factory;
-
 if (! function_exists('auth')) {
     /**
      * Get the available auth instance.
