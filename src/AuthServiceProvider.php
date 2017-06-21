@@ -11,5 +11,4 @@ class AuthServiceProvider extends \Illuminate\Auth\AuthServiceProvider
 
         parent::register();
     }
-
 }
