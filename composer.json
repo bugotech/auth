@@ -1,0 +1,30 @@
+{
+    "name"       : "bugotech/auth",
+    "description": "The Bugotech Auth package.",
+    "homepage"   : "http://www.netforce.com.br",
+    "license"    : "GPL v.3",
+
+    "authors": [
+        {
+            "name" : "Bruno Gonçalves",
+            "email": "bugotech@gmail.com"
+        }
+    ],
+
+    "require": {
+        "bugotech/foundation": "dev-master",
+        "illuminate/auth"    : "5.2.*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Bugotech\\Auth\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable"    : true
+}

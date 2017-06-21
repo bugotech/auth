@@ -1,0 +1,4 @@
+auto-service: bugotech.auth
+
+services:
+ - \Bugotech\Auth\AuthServiceProvider
