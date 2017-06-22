@@ -12,7 +12,7 @@ interface Tenant
     /**
      * Verifica se um inquilino existe.
      * @param $name
-     * @return boolean
+     * @return bool
      */
     public function exists($name);
 }
