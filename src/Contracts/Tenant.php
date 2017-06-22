@@ -3,6 +3,12 @@
 interface Tenant
 {
     /**
+     * Return ID do inquilino.
+     * @return int
+     */
+    public function getId();
+
+    /**
      * Procurar inquilino.
      * @param $name
      * @return \Bugotech\Auth\Contracts\Tenant
