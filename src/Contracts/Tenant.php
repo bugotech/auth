@@ -7,12 +7,12 @@ interface Tenant
      * @param $name
      * @return \Bugotech\Auth\Contracts\Tenant
      */
-    public function find($name);
+    public function findTenant($name);
 
     /**
      * Verifica se um inquilino existe.
      * @param $name
      * @return bool
      */
-    public function exists($name);
+    public function existsTenant($name);
 }

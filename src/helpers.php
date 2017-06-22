@@ -29,11 +29,11 @@ if (! function_exists('tenant')) {
 
         // Verificar se deve carregar o tenant
         if (! is_null($tenantName)) {
-            if ($tenant->exists($tenantName)) {
+            if ($tenant->existsTenant($tenantName)) {
                 throw new Exception(sprintf('Inquilino %s não foi encontrado', $tenantName));
             }
 
-            app()->instance('tenant', $tenant->find($tenantName));
+            app()->instance('tenant', $tenant->findTenant($tenantName));
         }
 
         return app('tenant');
