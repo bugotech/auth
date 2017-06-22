@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_USER_CLASS', '\App\User'),
+            'model' => env('AUTH_USER_CLASS', '\System\Apps\Admin\Usuario'),
         ],
 
         // 'users' => [
