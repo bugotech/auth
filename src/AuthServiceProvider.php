@@ -15,5 +15,9 @@ class AuthServiceProvider extends \Illuminate\Auth\AuthServiceProvider
         router()->middleware('guest', '\Bugotech\Auth\Middleware\Guest');
 
         parent::register();
+
+        // Alias
+        $this->app->alias('auth', '\Illuminate\Contracts\Auth\Factory');
+        $this->app->alias('auth.driver', '\Illuminate\Contracts\Auth\Guard');
     }
 }
