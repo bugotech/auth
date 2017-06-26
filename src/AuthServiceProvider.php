@@ -11,13 +11,13 @@ class AuthServiceProvider extends \Illuminate\Auth\AuthServiceProvider
         $this->app->configure('auth', __DIR__ . '/../config/auth.php');
 
         // Registrar middlewares
-        router()->middleware('auth', '\Bugotech\Auth\Middleware\Auth');
-        router()->middleware('guest', '\Bugotech\Auth\Middleware\Guest');
+        router()->middleware('auth', 'Bugotech\Auth\Middleware\Auth');
+        router()->middleware('guest', 'Bugotech\Auth\Middleware\Guest');
 
         parent::register();
 
         // Alias
-        $this->app->alias('auth', '\Illuminate\Contracts\Auth\Factory');
-        $this->app->alias('auth.driver', '\Illuminate\Contracts\Auth\Guard');
+        $this->app->alias('auth', 'Illuminate\Contracts\Auth\Factory');
+        $this->app->alias('auth.driver', 'Illuminate\Contracts\Auth\Guard');
     }
 }
