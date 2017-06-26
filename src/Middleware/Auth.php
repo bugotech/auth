@@ -1,7 +1,6 @@
 <?php namespace Bugotech\Auth\Middleware;
 
 use Closure;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Auth
