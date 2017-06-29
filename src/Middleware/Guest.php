@@ -14,8 +14,12 @@ class Guest
      */
     public function handle($request, Closure $next, $guard = null)
     {
+        // Tratar rot padrão
+        $route = config('auth.middlewares-routes.guest');
+        $route = is_null($route) ? '/' : route($route);
+
         if (auth($guard)->check()) {
-            return redirect('/');
+            return redirect($route);
         }
 
         return $next($request);

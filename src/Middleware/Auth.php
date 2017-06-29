@@ -20,7 +20,11 @@ class Auth
                 throw new NotFoundHttpException();
             }
 
-            return redirect()->guest(route('auth.login.get'));
+            // Tratar rot padrão
+            $route = config('auth.middlewares-routes.auth');
+            $route = is_null($route) ? '/login' : route($route);
+
+            return redirect()->guest($route);
         }
 
         return $next($request);

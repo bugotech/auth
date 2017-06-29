@@ -2,6 +2,11 @@
 
 return [
 
+    'middlewares-routes' => [
+        'auth' => 'auth.login.get',
+        'guest' => 'home',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
